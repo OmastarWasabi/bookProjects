@@ -52,16 +52,13 @@ func main() {
 		pageStr := r.URL.Query().Get("page")
 		page, err := strconv.Atoi(pageStr)
 		if err != nil || page < 1 {
-			page = 1 // Если ошибка при преобразовании или номер страницы меньше 1
+			page = 1 
 		}
 	
-		// Логика для получения данных для нужной страницы
-		// Например, вы можете использовать "page" для выбора нужного набора данных
-	
-		// Выводим номер страницы
+
 		fmt.Fprintf(w, "Отображаем данные для страницы: %d", page)
 	})
 	
-	// http.ResponseWriter
+	
 	http.ListenAndServe(":8080", nil)
 }
