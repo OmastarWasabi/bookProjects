@@ -4,7 +4,6 @@ import (
 	"encoding/json"
 	"fmt"
 	"net/http"
-	// "net/url"
 	
 )
 
@@ -17,7 +16,6 @@ type SearchData struct {
 	Search []FilmData `json:"Search"`
 }
 func PosterRequest(film string) (*SearchData, error){
-	// q := url.QueryEscape(film)
 	url := fmt.Sprintf("https://omdbapi.com/?apikey=748dbac3&s=%s", film)
 	fmt.Println(url)
 	resp, err := http.Get(url)

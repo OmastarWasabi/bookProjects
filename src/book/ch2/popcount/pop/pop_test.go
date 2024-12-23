@@ -1,9 +1,7 @@
 package pop
 
-import (
-	
-	"testing"
-)
+import "testing"
+
 
 func BenchmarkPopCount(b *testing.B){
 	var x uint64 = 0xFFFFFFFFFFFFFFFF

@@ -1,4 +1,4 @@
-module bookProjects/ch5/findlinks1
+module book/ch5/findlinks2_5.5
 
 go 1.21.1
 

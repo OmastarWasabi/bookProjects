@@ -1,9 +1,9 @@
 package main
 
 import (
-	"bookProjects/ch2/popcount/pop"
 	"fmt"
 
+	"bookProjects/ch2/popcount/pop"
 )
 
 

@@ -5,8 +5,6 @@ import (
 	"fmt"
 	"net/http"
 	"os"
-	// "log"
-	// "io"
 )
 
 type ComicsData struct {
@@ -73,22 +71,3 @@ func ComicsWriteFile(data ComicsData) map[int]ComicsData {
 	return dataMap
 }
 
-// func ComicsReadFile(){
-// 	dataMap := make(map[int]ComicsData)
-// 	// file, err := os.Open()
-//     // if err != nil {
-//     //     log.Fatal(err)
-//     // }
-// 	data, err := os.ReadFile("comicsList.json")
-// 	if err != nil {
-// 		return
-// 	}
-// 	err = json.Unmarshal(data, &dataMap)
-// 	if err != nil {
-// 		log.Fatal(err)
-// 	}
-// 	for key, value := range dataMap {
-// 		fmt.Printf("key %d val %s", key, value.Title)
-// 	}
-
-// }

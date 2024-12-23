@@ -15,7 +15,7 @@ const (
 	angle = math.Pi / 6       // углы осей х, у (=30 градусов)
 )
 
-var sin30, cos30 = math.Sin(angle), math.Cos(angle) // sin(30°) и cos(30°)
+var sin30, cos30 = math.Sin(angle), math.Cos(angle) 
 
 func main() {
 	http.HandleFunc("/", handler)
@@ -24,7 +24,7 @@ func main() {
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "image/svg+xml") // Устанавливаем заголовок ответа
+	w.Header().Set("Content-Type", "image/svg+xml") // устанавливаем заголовок ответа
 	fmt.Fprintf(w, "<svg xmlns='http://www.w3.org/2000/svg' "+
 		"style='stroke: grey; fill: white; stroke-width: 0.7' "+
 		"width='%d' height='%d'>", width, height)
@@ -48,7 +48,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "</svg>")
 }
 
-// Вычисление угла ячейки
+// вычисление угла ячейки
 func corner(i, j int) (float64, float64, float64) {
 	x := xyrange * (float64(i)/cells - 0.5)
 	y := xyrange * (float64(j)/cells - 0.5)
@@ -58,18 +58,18 @@ func corner(i, j int) (float64, float64, float64) {
 	return sx, sy, z
 }
 
-// Функция поверхности
+// функция поверхности
 func f(x, y float64) float64 {
 	r := math.Hypot(x, y) // расстояние от (0,0)
 	return math.Sin(r) / r // функция высоты
 }
 
-// Проверка конечности координат
+// проверка конечных точек координат
 func isFinite(x, y float64) bool {
 	return !(math.IsNaN(x) || math.IsNaN(y) || math.IsInf(x, 0) || math.IsInf(y, 0))
 }
 
-// Получение цвета на основе высоты
+// получение цвета на основе высоты
 func getColor(z float64) string {
 	minZ, maxZ := -0.5, 0.5
 	normalizedZ := (z - minZ) / (maxZ - minZ)

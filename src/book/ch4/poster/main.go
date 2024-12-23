@@ -1,11 +1,12 @@
 package main
 
 import (
-	"bookProjects/ch4/poster/posterPack"
 	"bufio"
 	"os"
 	"strings"
 	"fmt"
+
+	"bookProjects/ch4/poster/posterPack"
 )
 
 func main() {

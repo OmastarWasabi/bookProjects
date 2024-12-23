@@ -4,8 +4,6 @@ import (
 	"os"
 	"crypto/sha512"
 	"fmt"
-	
-	
 )
 
 func main() {

@@ -1,11 +1,12 @@
 package main
 
 import (
-	"ch4/packages/github"
 	"html/template"
 	"log"
 	"os"
 	"time"
+
+	"book/packages"
 )
 
 const templ = `{{.TotalCount}} тем:
@@ -22,18 +23,18 @@ func daysAgo(t time.Time) int {
 }
 
 func main() {
-	// Инициализация шаблона с функцией daysAgo
+	// инициализация шаблона с функцией daysAgo
 	report := template.Must(template.New("issueReport").
 		Funcs(template.FuncMap{"daysAgo": daysAgo}).
 		Parse(templ))
 
-	// Выполняем поиск по GitHub Issues
+	// выполняем поиск по GitHub Issues
 	result, err := github.SearchIssues(os.Args[1:])
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// Выполняем шаблон с выводом результата
+	// выполняем шаблон с выводом результата
 	if err := report.Execute(os.Stdout, result); err != nil {
 		log.Fatal(err)
 	}

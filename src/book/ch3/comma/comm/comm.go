@@ -5,21 +5,9 @@ import (
 	"fmt"
 	"sort"
 	"strings"
-	
-	
 )
 
-// func Comma(s string) string {
-// 	n := len(s)
-// 	if n <= 3 {
-// 		return s
-// 	}
-// 	return Comma(s[:n-3]) + "," + s[n-3:]
-// }
-
 func Anagramm(str1, str2 string) bool {
-	// lenStr1 := len(str1)
-	// lenStr2 := len(str2)
 	str1= strings.ToLower(str1)
 	str2 = strings.ToLower(str2)
 
@@ -77,12 +65,6 @@ func DigitFraction(str string) int {
 	return flag
 }
 
-// func DeleteChar(str string) string{
-// 	for i, ch := range str {
-		
-		
-// 	}
-// }
 func Factorial(n int) int {
 
 	if n == 1 {

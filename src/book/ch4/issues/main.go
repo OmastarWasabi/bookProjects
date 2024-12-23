@@ -1,14 +1,14 @@
 package main
 
 import (
-	"ch4/packages/github"
 	"fmt"
 	"log"
 	"os"
 	"time"
+
+	"book/packages"
 )
 
-// ИЗНАЧАЛЬНЫЙ main //
 func main() {
 	year, month, _ := time.Now().Date()
 	YearNow := formatYear(year, month)

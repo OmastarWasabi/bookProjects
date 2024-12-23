@@ -1,9 +1,10 @@
 package main
 
 import (
-	"bookProjects/ch4/xkcd/xkcd"
 	"fmt"
 	"os"
+
+	"bookProjects/ch4/xkcd/xkcd"
 )
 
 func main() {

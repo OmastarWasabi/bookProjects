@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Nodes Test</title>
+    <style>
+        /* Это скрытый текст в <style>, который не должен быть выведен */
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Test Page</h1>
+        <p>This is a paragraph with <span>some inline text</span> and <a href="#">a link</a>.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>About</h2>
+            <p>This is some content about the page. It should be displayed.</p>
+        </section>
+
+        <section>
+            <h2>Another Section</h2>
+            <p>Here's some more text in another paragraph.</p>
+            <div>
+                <p>Nested text inside a <strong>div</strong> element.</p>
+            </div>
+        </section>
+
+        <script>
+            // Это скрытый текст в <script>, который не должен быть выведен
+            console.log("Hello, world!");
+        </script>
+    </main>
+
+    <footer>
+        <p>Contact us: <a href="mailto:test@example.com">test@example.com</a></p>
+    </footer>
+</body>
+</html>
